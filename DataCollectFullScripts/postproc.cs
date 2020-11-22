@@ -84,7 +84,7 @@ public class postproc : MonoBehaviour {
 		Camera cam = GetComponent<Camera>();
 		//draws the pixels from the source texture to the destination texture
 		m_SavingDepth = true;
-				RenderTexture tmp = RenderTexture.GetTemporary (source.width, source.height, 16, RenderTextureFormat.ARGB32);
+		RenderTexture tmp = RenderTexture.GetTemporary (source.width, source.height, 16, RenderTextureFormat.ARGB32);
 
 		Graphics.Blit(source, tmp, PostprocessMaterial);
 
