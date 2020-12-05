@@ -5,7 +5,7 @@ using System;
 
 public class demo : MonoBehaviour {
 
-	public bool new_file = true;
+	private bool new_file = true;
 	public void save_annotation(annotation new_annotation)
 	{
 		int state_id = 0;
@@ -25,13 +25,11 @@ public class demo : MonoBehaviour {
 	public string[] states = new string[]{"143_01", "143_02", "143_04", "143_07"};
 	
 	//////////////
-	public Transform leftUpperLeg, leftLowerLeg, leftFoot, leftToes;
-    public Transform rightUpperLeg, rightLowerLeg, rightFoot, rightToes;
-    public Transform hips,spine, chest, neck, head, jaw;
-    public Transform leftShoulder, leftUpperArm, leftLowArm, leftHand, leftHandindex1, LeftHandMiddle1, leftHandPinky1,
-    leftHandRing1, leftHandThumb1;
-    public Transform  rightShoulder, rightUpperArm, rightLowArm, rightHand, rightHandindex1, rightHandMiddle1, rightHandPinky1,
-    rightHandRing1, rightHandThumb1;
+	public Transform Hips, Spine, Chest, Neck, Head;
+    public Transform LeftUpLeg, LeftLeg, LeftFoot, LeftToes;
+    public Transform RightUpLeg, RightLeg, RightFoot, RightToes;
+    public Transform LeftShoulder, LeftArm, LeftForeArm, LeftHand;
+    public Transform  RightShoulder, RightArm, RightForeArm, RightHand;
 
 	[SerializeField]
 	private HumanPoseData hp;
@@ -39,7 +37,7 @@ public class demo : MonoBehaviour {
 	
 	void Start() 
 	{
-		 //Get each joint object from "HumanBodyBones" 
+		 /*//Get each joint object from "HumanBodyBones" 
         animator = GetComponent<Animator>();
         
         // local position of each bone. 
@@ -67,7 +65,7 @@ public class demo : MonoBehaviour {
 		rightShoulder = animator.GetBoneTransform(HumanBodyBones.RightShoulder);
 		rightUpperArm = animator.GetBoneTransform(HumanBodyBones.RightUpperArm);
 		rightLowArm = animator.GetBoneTransform(HumanBodyBones.RightLowerArm);
-		rightHand = animator.GetBoneTransform(HumanBodyBones.RightHand);
+		rightHand = animator.GetBoneTransform(HumanBodyBones.RightHand);*/
 	}
 	
 	private void Update () 

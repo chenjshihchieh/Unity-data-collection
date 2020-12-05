@@ -24,30 +24,30 @@ public class JointData
     public JointData(demo capturePose)
     {
 		
-        Transform jointTrans = capturePose.hips; 
+        Transform jointTrans = capturePose.Hips; 
         Vector3 relativeP2origin;
         Transform[] keypoint_positions = {
-		capturePose.hips
-        , capturePose.spine          
-        , capturePose.chest
-        , capturePose.neck
-        , capturePose.head
-        , capturePose.leftUpperLeg
-        , capturePose.leftLowerLeg
-        , capturePose.leftFoot
-        , capturePose.leftToes
-        , capturePose.rightUpperLeg
-        , capturePose.rightLowerLeg
-        , capturePose.rightFoot
-        , capturePose.rightToes
-        , capturePose.leftShoulder
-        , capturePose.leftUpperArm
-        , capturePose.leftLowArm
-        , capturePose.leftHand
-        , capturePose.rightShoulder
-        , capturePose.rightUpperArm
-        , capturePose.rightLowArm
-        , capturePose.rightHand};  
+		capturePose.Hips
+        , capturePose.Spine          
+        , capturePose.Chest
+        , capturePose.Neck
+        , capturePose.Head
+        , capturePose.LeftUpLeg
+        , capturePose.LeftLeg
+        , capturePose.LeftFoot
+        , capturePose.LeftToes
+        , capturePose.RightUpLeg
+        , capturePose.RightLeg
+        , capturePose.RightFoot
+        , capturePose.RightToes
+        , capturePose.LeftShoulder
+        , capturePose.LeftArm
+        , capturePose.LeftForeArm
+        , capturePose.LeftHand
+        , capturePose.RightShoulder
+        , capturePose.RightArm
+        , capturePose.RightForeArm
+        , capturePose.RightHand};  
 		
 		
 		

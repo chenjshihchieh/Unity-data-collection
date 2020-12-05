@@ -8,12 +8,13 @@ using System;
 
 public class GatherKeypoints2d : MonoBehaviour {
 	private bool new_file = true;
-	private int count; 
+	private int count;
+	private string prev_camid = "";
+	private string current_camid;
 	private GameObject avatar; 
 	private Camera cam;
 	private demo charactor;
 	private CameraPointsData cameraPtsData;
-	
 	
 	void Start(){
 		//Get Camera Component
@@ -35,18 +36,21 @@ public class GatherKeypoints2d : MonoBehaviour {
 		charactor = avatar.GetComponent<demo>();
 	}
 
-	public void gatherKeypoints2d(annotation new_annotation) {
+	/*public void gatherKeypoints2d(annotation new_annotation) {
 		//Write data to file as Json format
-		
+		current_camid = $"{cam.name}{new_annotation.id}";
+		if(current_camid == prev_camid) return;
 		cameraPtsData = new CameraPointsData(charactor,cam);	
 		new_annotation.keypoints2d = cameraPtsData.keypoints2d;
         string annotation_data = JsonUtility.ToJson(new_annotation);
 		if(new_file){
-					File.WriteAllText("../Pictures/AnnotationJSON/annotation.json", annotation_data);
-					new_file = false;
-				}else{
-					File.AppendAllText("../Pictures/AnnotationJSON/annotation.json", 
-						 Environment.NewLine + annotation_data);
-				}
-	}
+			File.WriteAllText($"../Pictures/AnnotationJSON/{cam.name}_annotation.json", annotation_data);
+			new_file = false;
+			prev_camid = current_camid;
+		}else{
+			File.AppendAllText($"../Pictures/AnnotationJSON/{cam.name}_annotation.json", 
+				 ", " + Environment.NewLine + annotation_data);
+				 prev_camid = current_camid;
+		}
+	}*/
 }
