@@ -16,7 +16,7 @@ for z in range(len(annotation)):
 
     for i in range(0, len(keypoint_list), 2):
         x = keypoint_list[i]
-        y = 665 - keypoint_list[i + 1]
+        y = len(capture) - keypoint_list[i + 1]
         rr, cc = draw.disk((y, x), 3)
         capture[rr, cc] = 255
         
