@@ -1,5 +1,0 @@
-sceneSetups:
-- path: Assets/Huge Mocap Library/demo/scripts/scenes/main.unity
-  isLoaded: 1
-  isActive: 1
-  isSubScene: 0

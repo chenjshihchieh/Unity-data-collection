@@ -1,2 +1,0 @@
-DepthDataShader.shader and postproc.cs are both for getting depth information in unity. Both scripts are the result of utilizing multiple tutorials so the naming of certain objects can be weird.
-Essentially, DepthDataShader.shader allows a shader called postproc to be available. Apply that shader to a materical and call it postprocessing. Then, attach postproc to a camera and select postprocessing as your Postprocess Material.
